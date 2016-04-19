@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-mvc",
+  "version": "1.0.0",
+  "description": "mvc implementation for nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalihKARAHAN/nodejs-mvc.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "mvc"
+  ],
+  "author": "Salih KARAHAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalihKARAHAN/nodejs-mvc/issues"
+  },
+  "homepage": "https://github.com/SalihKARAHAN/nodejs-mvc#readme"
+}
