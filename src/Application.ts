@@ -1,11 +1,7 @@
-module NodeJS {
-    export module Mvc {
+import http = require('http');
 
-        /**
-         *
-         */
-        export class Application {
-
-        }
+export class Application {
+    Start(url, port): void {
+        http.listen(url,port);
     }
 }
