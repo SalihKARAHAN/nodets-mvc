@@ -1,2 +1,6 @@
 # ignored to generate files
 *.js
+
+# ignored to directories
+build/
+test/
