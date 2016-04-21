@@ -2,5 +2,6 @@
 *.js
 
 # ignored to directories
+node_modules/
 build/
 test/
