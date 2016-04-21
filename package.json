@@ -1,6 +1,6 @@
 {
     "name": "nodets-mvc",
-    "version": "1.0.0-beta",
+    "version": "0.0.1",
     "description": "mvc implementation for nodejs with typescript",
     "main": "",
     "scripts": {
