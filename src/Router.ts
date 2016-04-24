@@ -1,12 +1,22 @@
-import {Method}  from './Enums/Http.Method';
+// import {Method}  from './Enums/Http.Method';
+import RouteTable = require('./RouteTable');
 
 abstract class Router {
-    private routeInfo = {};
-    public AddUrl(targetUrl: string, nameOfController: string, nameOfAction: string, method: Method): void {
-        var url: string = this.routeInfo[targetUrl];
-        if (!url) {
-            this.routeInfo[targetUrl] = { url: targetUrl, controller: nameOfController, action: nameOfAction, method: method };
-        }
+
+     private _routes:RouteTable = null;
+
+    abstract Route(routeInfo:RouteTable):void;
+
+    // public HasRouteData():boolean{
+    //     var routeCount:number = Object.keys(this.routeInfo).length;
+    //     if (routeCount === 0) {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    AddRoute():void{
+        
     }
 }
 

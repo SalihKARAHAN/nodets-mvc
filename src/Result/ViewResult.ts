@@ -1,0 +1,5 @@
+class ViewResult {
+
+}
+
+export = ViewResult;
