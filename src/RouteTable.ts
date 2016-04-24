@@ -23,13 +23,13 @@ class RouteTable {
         let url: string = this._route[targetUrl];
 
         if (!url) {
-            this._route[targetUrl] = new RouteData(name,targetUrl,nameOfController, nameOfAction,method);
+            this._route[targetUrl] = new RouteData(name, targetUrl, nameOfController, nameOfAction, method);
         }
     }
 
-    public Change():void{
-        
+    public Change(): void {
+
     }
 }
 
-export =RouteTable;
+export = RouteTable;
