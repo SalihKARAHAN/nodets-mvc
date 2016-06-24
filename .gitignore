@@ -3,5 +3,6 @@
 
 # ignored to directories
 node_modules/
+typings/
 build/
 test/

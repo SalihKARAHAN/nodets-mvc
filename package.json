@@ -1,26 +1,29 @@
 {
-    "name": "nodets-mvc",
-    "version": "0.0.1",
-    "description": "mvc implementation for nodejs with typescript",
-    "main": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SalihKARAHAN/nodets-mvc.git"
-    },
-    "keywords": [
-        "nodets-mvc",
-        "typescript",
-        "node",
-        "nodejs",
-        "mvc"
-    ],
-    "author": "Salih KARAHAN",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/SalihKARAHAN/nodets-mvc/issues"
-    },
-    "homepage": "https://github.com/SalihKARAHAN/nodets-mvc#readme"
+  "name": "nodets-mvc",
+  "version": "0.0.0-alpha",
+  "description": "mvc implementation for nodejs with typescript",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalihKARAHAN/nodets-mvc.git"
+  },
+  "keywords": [
+    "nodets-mvc",
+    "typescript",
+    "node",
+    "nodejs",
+    "mvc"
+  ],
+  "author": "Salih KARAHAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalihKARAHAN/nodets-mvc/issues"
+  },
+  "homepage": "https://github.com/SalihKARAHAN/nodets-mvc#readme",
+  "devDependencies": {
+    "typings": "^1.3.0"
+  }
 }
