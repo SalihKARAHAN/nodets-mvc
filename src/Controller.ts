@@ -1,10 +1,10 @@
-import ViewResult = require('./Result/ViewResult');
+import HtmlResult = require('./Result/HtmlResult');
 
 class Controller{
-    
-    View(): ViewResult {
-        let result:ViewResult = new ViewResult();
-        return result;
+
+    Html(): HtmlResult {
+        let html:HtmlResult = new HtmlResult();
+        return html;
     }
 
     Json():any{

@@ -1,5 +1,0 @@
-class ViewResult {
-
-}
-
-export = ViewResult;
