@@ -1,12 +1,14 @@
-import {Router} from '../src/Router';
+import Router = require('../src/Router');
 import RouteData = require('./RouteData');
+import ControllerManager = require('./ControllerManager');
+import IResult = require('./Result/IResult');
 
 import UrlHelper = require('url');
 import HttpHelper = require('http');
 
 class HttpManager {
 
-    constructor(router: NodeTS.Router) {
+    constructor(router: Router) {
         global.Router = router;
     }
 
@@ -17,8 +19,9 @@ class HttpManager {
         let methodType: string = request.method;
         console.log(`REQUEST=> : ${methodType} -> ${url}`);
         // find method
-        let routeData: NodeTS.RouteData = global.Router.GetRouteData(url);
-
+        let routeData: RouteData = global.Router.GetRouteData(url);
+        let controllerManager: ControllerManager = new ControllerManager();
+        let result: IResult = controllerManager.InvokeActionByRouteData(routeData);
         // authentication & authorization
         // before decorators
         // invoke action

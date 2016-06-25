@@ -1,6 +1,6 @@
 import Exception = require('./Exception');
 
-class KeyIsNotExistException extends Exception{
+class KeyIsNotExistException extends Exception {
 
 }
 

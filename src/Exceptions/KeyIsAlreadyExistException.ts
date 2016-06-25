@@ -1,6 +1,6 @@
 import Exception = require('./Exception');
 
-class KeyIsAlreadyExistException extends Exception{
+class KeyIsAlreadyExistException extends Exception {
 
 }
 

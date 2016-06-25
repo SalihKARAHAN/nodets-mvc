@@ -1,6 +1,6 @@
 interface IResult {
-    Name:string;
-    Content:string;
+    Name: string;
+    Content: string;
 }
 
 export = IResult;

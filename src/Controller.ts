@@ -2,7 +2,7 @@ import HtmlResult = require('./Result/HtmlResult');
 import JsonResult = require('./Result/JsonResult');
 
 /**
- * 
+ *
  */
 abstract class Controller {
 

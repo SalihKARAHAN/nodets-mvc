@@ -1,9 +1,9 @@
 import HttpHelper = require('http');
 import HttpManager = require('./HttpManager');
-import {Router} from '../src/Router';
+import Router = require('../src/Router');
 
 class Application {
-    private _router: NodeTS.Router = null;
+    private _router: Router = null;
 
     constructor() {
 
@@ -25,7 +25,7 @@ class Application {
      * [RegisterRouter description]
      * @param {Router} router [description]
      */
-    public RegisterRouter(router: NodeTS.Router): void {
+    public RegisterRouter(router: Router): void {
         this._router = router;
     }
 }

@@ -1,9 +1,9 @@
-import {Router} from '../src/Router';
+import Router = require('../src/Router');
 import RouteTable = require('../src/RouteTable');
-import {Method} from '../src/Enums/Http.Method';
+import Method = require('../src/Enums/Http.Method');
 
 class CustomRouter extends Router {
-    RegisterCustomRoutes(routes: NodeTS.RouteTable): void {
+    RegisterCustomRoutes(routes: RouteTable): void {
         routes.Add('/', 'Home', 'Index', Method.GET)
     }
 }
