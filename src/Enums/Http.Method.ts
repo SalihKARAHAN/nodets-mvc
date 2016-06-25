@@ -1,13 +1,13 @@
 module Http {
     export enum Method {
-        Get,
-        Head,
-        Post,
-        Put,
-        Delete,
-        Options,
-        Trace,
-        Connect
+        GET
+        , HEAD
+        , POST
+        , PUT
+        , DELETE
+        , OPTIONS
+        , TRACE
+        , CONNECT
     }
 }
 
