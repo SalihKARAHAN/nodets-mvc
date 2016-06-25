@@ -1,34 +1,39 @@
 import {Method}  from './Enums/Http.Method';
-
-class RouteData {
-    private _name: string;
-    private _url: string;
-    private _controllerName: string;
-    private _actionName: string;
-    private _method: Method;
-
-    constructor(name: string, url: string, controllerName: string, actionName: string, method: Method) {
-        this._name = name;
-        this._url = url;
-        this._controllerName = controllerName;
-        this._actionName = actionName;
-        this._method = method;
-    }
-}
+import RouteData = require('./RouteData');
+import KeyValueCollection = require('./Collections/Generic/KeyValueCollection');
+import KeyIsAlreadyExistException = require('./Exceptions/KeyIsAlreadyExistException');
 
 class RouteTable {
-    private _route: {} = {};
+    private _collection: KeyValueCollection<string, RouteData>;
 
-    public Add(name: string, targetUrl: string, nameOfController: string, nameOfAction: string, method: Method): void {
-        let url: string = this._route[targetUrl];
-
-        if (!url) {
-            this._route[targetUrl] = new RouteData(name, targetUrl, nameOfController, nameOfAction, method);
-        }
+    constructor() {
+        this._collection = new KeyValueCollection<string, RouteData>();
     }
 
-    public Change(): void {
+    /**
+     * The method add new route declaration to this route table instance.
+     * @param {string} targetUrl        [description]
+     * @param {string} nameOfController [description]
+     * @param {string} nameOfAction     [description]
+     * @param {Method} method           [description]
+     */
+    Add(targetUrl: string, nameOfController: string, nameOfAction: string, method: Method): void {
+        if (this._collection.ContainsKey(targetUrl)) {
+            throw new KeyIsAlreadyExistException('This url is already in the route table!');
+        }
 
+        this._collection[targetUrl] = new RouteData(targetUrl, nameOfController, nameOfAction, method);
+    }
+
+    /**
+     * [GetRouteData description]
+     * @param  {string}    url        [description]
+     * @param  {Method}    methodType [description]
+     * @return {RouteData}            [description]
+     */
+    GetRouteData(url:string, methodType:Method):RouteData{
+        let routeData:RouteData = this._collection[url];
+        return routeData;
     }
 }
 

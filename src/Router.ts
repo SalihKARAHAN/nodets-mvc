@@ -1,23 +1,24 @@
-// import {Method}  from './Enums/Http.Method';
+import {Method}  from './Enums/Http.Method';
 import RouteTable = require('./RouteTable');
 
+/**
+ *
+ */
 abstract class Router {
 
-     private _routes:RouteTable = null;
+    private _routeTable: RouteTable = null;
 
-    abstract Route(routeInfo:RouteTable):void;
-
-    // public HasRouteData():boolean{
-    //     var routeCount:number = Object.keys(this.routeInfo).length;
-    //     if (routeCount === 0) {
-    //         return false;
-    //     }
-    //     return true;
-    // }
-
-    AddRoute():void{
-        
+    constructor(){
+        this._routeTable = new RouteTable();
+        this.RegisterCustomRoutes(this._routeTable);
     }
+
+    /**
+     * This method save user defined route informations to application route records.
+     * @param {RouteTable} routeTable is RouteTable
+     */
+    abstract RegisterCustomRoutes(routeTable: RouteTable):void;
+    
 }
 
 export = Router;
